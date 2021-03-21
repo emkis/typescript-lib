@@ -2,18 +2,12 @@
  * @packageDocumentation A small and nice library
  */
 
-import {
+import type {
   IDataLayerEvent,
   TTrackEventParams,
   TTrackEventProps,
   IValidDataLayerEvent,
 } from './types'
-
-declare global {
-  interface Window {
-    dataLayer: IDataLayerEvent[]
-  }
-}
 
 /**
  * Create and return tracking functions with injected initial properties.
@@ -62,7 +56,7 @@ export function createTracker(initialProps = {} as IValidDataLayerEvent) {
 /**
  * Cool function that greets you
  * @param name - you name
- * @private
+ * @beta
  */
 export function greet(name: string) {
   return `Hello there, ${name} :)`
