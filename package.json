@@ -1,0 +1,38 @@
+{
+  "name": "my-nice-lib",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "yarn build --watch --preserveWatchOutput",
+    "lint": "eslint src --ext js,ts",
+    "lint:fix": "eslint --fix --ext js,ts src && eslint --fix --ext js,ts tests",
+    "format": "prettier --write {src,tests}/**/*.{j,t}s",
+    "test": "jest",
+    "test:watch": "jest --watch --onlyChanged",
+    "api-extract": "yarn build && yarn api-extractor run",
+    "api-extract:update": "yarn build && yarn api-extractor run --local"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@microsoft/api-documenter": "^7.9.10",
+    "@microsoft/api-extractor": "^7.10.4",
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "jest": "^26.5.3",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "typescript": "^4.0.3"
+  }
+}
