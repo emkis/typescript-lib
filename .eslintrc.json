@@ -29,7 +29,11 @@
   },
   "overrides": [
     {
-      "files": ["tests/**/*.ts"],
+      "files": [
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.tests.ts"
+      ],
       "env": { "jest": true, "node": true }
     }
   ]
