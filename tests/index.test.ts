@@ -1,5 +1,5 @@
-import { mockGtmDataLayer } from './__mocks__/window'
-import { createTracker } from '../src/index'
+import { mockGtmDataLayer } from '@mocks/window'
+import { createTracker } from '@/index'
 
 describe('GTM Analytics Service', () => {
   beforeEach(jest.clearAllMocks)

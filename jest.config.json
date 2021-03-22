@@ -1,5 +1,6 @@
 {
   "moduleNameMapper": {
-    "@/(.*)$": "<rootDir>/src/$1"
+    "@/(.*)$": "<rootDir>/src/$1",
+    "@mocks/(.*)$": "<rootDir>/tests/__mocks__/$1"
   }
 }

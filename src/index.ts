@@ -7,7 +7,7 @@ import type {
   TTrackEventParams,
   TTrackEventProps,
   IValidDataLayerEvent,
-} from './types'
+} from '@/types'
 
 /**
  * Create and return tracking functions with injected initial properties.

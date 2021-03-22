@@ -1,4 +1,4 @@
-import type { IDataLayerEvent } from './types'
+import type { IDataLayerEvent } from '@/types'
 
 declare global {
   interface Window {
