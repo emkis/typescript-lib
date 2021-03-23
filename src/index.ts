@@ -10,13 +10,14 @@ import type {
 } from '@/types'
 
 /**
- * Create and return tracking functions with injected initial properties.
+ * Create and return track functions with injected initial properties.
  * @param initialProps - Properties that will be injected in every track event in this context.
- * @public
  */
-export function createTracker(initialProps = {} as IValidDataLayerEvent) {
+export function createTrackerContext(
+  initialProps = {} as IValidDataLayerEvent
+) {
   /**
-   * Track and event.
+   * Track an event.
    * @param eventProps - Properties you would like to track.
    */
   function trackEvent(eventProps: TTrackEventParams) {
@@ -29,8 +30,8 @@ export function createTracker(initialProps = {} as IValidDataLayerEvent) {
   }
 
   /**
-   * Partial function that returns the trackEvent function with wanted properties injected.
-   * @param defaultProps - Properties that will be injected in every track event in this context.
+   * Partial function that returns the trackEvent function with provided properties injected in event payload.
+   * @param defaultProps - Properties that will be injected in in the returned function payload.
    */
   function trackerWithDefaultProps<T extends Partial<TTrackEventProps>>(
     defaultProps: T

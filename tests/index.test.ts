@@ -1,14 +1,14 @@
 import { mockGtmDataLayer } from '@mocks/window'
-import { createTracker } from '@/index'
+import { createTrackerContext } from '@/index'
 
 describe('GTM Analytics Service', () => {
   beforeEach(jest.clearAllMocks)
 
   const mockDataLayer = mockGtmDataLayer()
 
-  describe('When createTracker is called', () => {
+  describe('When createTrackerContext is called', () => {
     it('should return expected tracker functions', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
 
       expect(trackContext).toEqual({
         trackEvent: expect.any(Function),
@@ -19,7 +19,7 @@ describe('GTM Analytics Service', () => {
     it('should return trackEvent with initial properties injected in event payload', () => {
       const initialProps = { foo: 'FOO', bar: 'BaR' }
 
-      const trackContext = createTracker(initialProps)
+      const trackContext = createTrackerContext(initialProps)
       const { trackEvent } = trackContext
 
       trackEvent({ action: '...', category: '...', label: '...' })
@@ -37,7 +37,7 @@ describe('GTM Analytics Service', () => {
 
   describe('When trackEvent is called', () => {
     it('should have default properties in event payload', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackEvent } = trackContext
 
       trackEvent({
@@ -56,7 +56,7 @@ describe('GTM Analytics Service', () => {
     })
 
     it('should be able to track new properties, other than the default ones', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackEvent } = trackContext
 
       trackEvent({
@@ -82,7 +82,7 @@ describe('GTM Analytics Service', () => {
     })
 
     it('should have "value" prop defined as empty string by default', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackEvent } = trackContext
 
       trackEvent({ action: '...', category: '...', label: '...' })
@@ -93,7 +93,7 @@ describe('GTM Analytics Service', () => {
     })
 
     it('prop "value" should be able to be defined as another value', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackEvent } = trackContext
 
       trackEvent({ action: '...', category: '...', label: '...', value: 333 })
@@ -106,7 +106,7 @@ describe('GTM Analytics Service', () => {
 
   describe('When trackerWithDefaultProps is called', () => {
     it('should return a function that injects the provided props in the next function', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackerWithDefaultProps } = trackContext
       const myTracker = trackerWithDefaultProps({
         label: 'My__Label',
@@ -130,7 +130,7 @@ describe('GTM Analytics Service', () => {
     })
 
     it('should be able to inject new props in returned function', () => {
-      const trackContext = createTracker()
+      const trackContext = createTrackerContext()
       const { trackerWithDefaultProps } = trackContext
       const myTracker = trackerWithDefaultProps({
         label: 'arou',
@@ -163,7 +163,7 @@ describe('GTM Analytics Service', () => {
     })
 
     it('should contain all the default props in event payload', () => {
-      const trackContext = createTracker({ situation: 'Binuca de Sico' })
+      const trackContext = createTrackerContext({ situation: 'Binuca de Sico' })
       const { trackerWithDefaultProps } = trackContext
 
       const myTracker = trackerWithDefaultProps({
