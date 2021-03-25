@@ -12,6 +12,7 @@ import type {
 /**
  * Create and return track functions with injected initial properties.
  * @param initialProps - Properties that will be injected in every track event in this context.
+ * @public
  */
 export function createTrackerContext(
   initialProps = {} as IValidDataLayerEvent
