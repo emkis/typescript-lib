@@ -1,5 +1,5 @@
 import { mockGtmDataLayer } from '@mocks/window'
-import { createTrackerContext } from '@/index'
+import { createTrackerContext } from '@/gtm'
 
 describe('GTM Analytics Service', () => {
   beforeEach(jest.clearAllMocks)
