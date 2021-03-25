@@ -1109,19 +1109,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@microsoft/api-documenter@^7.12.14":
-  version "7.12.14"
-  resolved "https://registry.yarnpkg.com/@microsoft/api-documenter/-/api-documenter-7.12.14.tgz#aacb040c1eead1938c79c0b0a64691ae91091066"
-  integrity sha512-+mOZ3c0lp6nm7l++utnNj+e1BZHJAe/tr+j1nuYN1pSxcj2BZkYy8BeDJX7cWgaQcxqq72dSWsAu3/sJ53l4bQ==
-  dependencies:
-    "@microsoft/api-extractor-model" "7.12.2"
-    "@microsoft/tsdoc" "0.12.24"
-    "@rushstack/node-core-library" "3.36.0"
-    "@rushstack/ts-command-line" "4.7.8"
-    colors "~1.2.1"
-    js-yaml "~3.13.1"
-    resolve "~1.17.0"
-
 "@microsoft/api-extractor-model@7.12.2":
   version "7.12.2"
   resolved "https://registry.yarnpkg.com/@microsoft/api-extractor-model/-/api-extractor-model-7.12.2.tgz#d48b35e8ed20643b1c19d7a4f80c90c42dc7d1d8"
@@ -1130,7 +1117,7 @@
     "@microsoft/tsdoc" "0.12.24"
     "@rushstack/node-core-library" "3.36.0"
 
-"@microsoft/api-extractor@^7.13.2":
+"@microsoft/api-extractor@^7.10.4":
   version "7.13.2"
   resolved "https://registry.yarnpkg.com/@microsoft/api-extractor/-/api-extractor-7.13.2.tgz#c44762d27aee05c4da16c03fc8786bd0fa31c7eb"
   integrity sha512-2fD0c8OxZW+e6NTaxbtrdNxXVuX7aqil3+cqig3pKsHymvUuRJVCEAcAJmZrJ/ENqYXNiB265EyqOT6VxbMysw==
@@ -3749,14 +3736,6 @@ js-yaml@^3.13.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
-js-yaml@~3.13.1:
-  version "3.13.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
-  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
