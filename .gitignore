@@ -116,5 +116,3 @@ dist
 .pnp.*
 
 temp
-etc/*
-!etc/.gitkeep
