@@ -16,13 +16,13 @@
     "extract-api:update": "yarn build && yarn api-extractor run --local"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-env": "^7.13.12",
     "@babel/preset-typescript": "^7.10.4",
     "@microsoft/api-documenter": "^7.12.14",
     "@microsoft/api-extractor": "^7.13.2",
     "@types/jest": "^26.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
