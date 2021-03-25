@@ -1,7 +1,7 @@
 {
   "moduleNameMapper": {
     "@/(.*)$": "<rootDir>/src/$1",
-    "@mocks/(.*)$": "<rootDir>/tests/__mocks__/$1"
+    "@mocks/(.*)$": "<rootDir>/src/__mocks__/$1"
   },
   "testMatch": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test|tests).[jt]s?(x)"],
   "modulePathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/node_modules/"]
