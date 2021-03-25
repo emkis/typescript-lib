@@ -12,8 +12,8 @@
     "format": "prettier --write {src,tests}/**/*.{j,t}s",
     "test": "jest",
     "test:watch": "jest --watch --onlyChanged",
-    "api-extract": "yarn build && yarn api-extractor run",
-    "api-extract:update": "yarn build && yarn api-extractor run --local"
+    "extract-api": "yarn build && yarn api-extractor run",
+    "extract-api:update": "yarn build && yarn api-extractor run --local"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
