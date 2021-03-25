@@ -62,3 +62,12 @@ export function createTrackerContext(
 export function greet(name: string) {
   return `Hello there, ${name} :)`
 }
+
+/**
+ * Cool function that screams to you
+ * @param name - you name
+ * @internal
+ */
+export function scream(name: string) {
+  return `HELLOOOO, ${name} !!!!`
+}
